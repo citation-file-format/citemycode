@@ -10,15 +10,14 @@ var tmp_url = toString(url).replace("github", "raw.githubusercontent")
 var url = tmp_url.replace("blob/", "")
 
 
-// var file = rp(url)
-//   .then(function(html) {
-//     // console.log(html);
-//     file = yaml.load(html)
-//   })
-//   .catch(function(err) {
-//     //handle error
-//   });
-
+rp(url)
+  .then(function(html) {
+    // console.log(html);
+    file = yaml.load(html)
+  })
+  .catch(function(err) {
+    //handle error
+  });
 
 
 // var parts = window.name.split("#")
