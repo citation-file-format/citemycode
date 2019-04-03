@@ -5,22 +5,24 @@ if (typeof chrome !== "undefined"){
 yaml = require('js-yaml')
 
 const rp = require('request-promise');
-const url = //placeholder for url of raw CITATION.cff file
+var url = decodeURI(parts[1])
+var tmp_url = toString(url).replace("github", "raw.githubusercontent")
+var url = tmp_url.replace("blob/", "")
 
-var file = rp(url)
-  .then(function(html) {
-    // console.log(html);
-    file = yaml.load(html)
-  })
-  .catch(function(err) {
-    //handle error
-  });
+
+// var file = rp(url)
+//   .then(function(html) {
+//     // console.log(html);
+//     file = yaml.load(html)
+//   })
+//   .catch(function(err) {
+//     //handle error
+//   });
 
 
 
 // var parts = window.name.split("#")
 // var color = parts[0]
-// var url = decodeURI(parts[1])
 //
 // $(".button")
 //     .fadeIn()
