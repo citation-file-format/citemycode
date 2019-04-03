@@ -6,7 +6,7 @@ var logUrl = "http://unpaywall.org/log/install";
 
 
 function showWelcomePage(){
-    browser.tabs.create({url: "http://unpaywall.org/welcome"}, function (tab) {});
+    browser.tabs.create({url: "http://citation-file-format.github.io/citemycode"}, function (tab) {});
 }
 
 function checkToShowWelcomePage(){
