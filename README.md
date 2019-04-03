@@ -6,7 +6,6 @@ Cite My Code works by pulling preferred citation information from [CITATION.cff]
 
 ### Installation (Chrome)
 1. Clone or download the [Cite My Code repository](https://github.com/citation-file-format/citemycode)
-<img src="https://raw.githubusercontent.com/dbouquin/citemycode/master/images/clone_screenshot.png" height="200">
 
 2. Go to your Chrome Preferences menu, and click Extensions
 <img src="https://raw.githubusercontent.com/dbouquin/citemycode/master/images/select_extensions.png" height="400">
