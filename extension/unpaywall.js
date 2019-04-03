@@ -720,10 +720,23 @@ var getAbsoluteUrl = (function() {
 function run() {
     reportInstallation()
 
-    // Setting globally. Used when we search the doc with regex for DOI.
-    docAsStr = document.documentElement.innerHTML;
+    // Get the current URL
+    var currUrl = window.location.href
+    
+    /* Check if the current URL starts with
+    https://github.com
+    
+    We assume https protocol, as that's what GitHub
+    uses per default and via forwarding from
+    http.
+    We also assume no www prefix, as GitHub
+    forwards to non-prefixed URL per default.
+    */
+    if (currUrl.substring(0, 18) == "https://github.com") {
+        alert("GitHub")
+    }
 
-    doi = findDoi() // setting this globally.
+    /*doi = findDoi() // setting this globally.
 
     // the meat of the extension does not run unless we find a DOI
     if (!doi){
@@ -741,7 +754,7 @@ function run() {
             insertIframe(searchResults.color, searchResults.url)
             clearInterval(resultsChecker) // stop polling
         }
-    }, 250)
+    }, 250)*/
 }
 
 function runWithSettings(){
