@@ -1,0 +1,21 @@
+cff-version: 1.0.3
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: https://orcid.org/0000-0003-4925-7248
+authors:
+  - family-names: Haupt
+    given-names: Carina
+    orcid: https://orcid.org/0000-0001-6447-1379
+authors:
+  - family-names: Bouquin
+    given-names: Daina
+    orcid: https://orcid.org/0000-0003-2626-3688
+authors:
+  - family-names: Gibson
+    given-names: Sarah
+title: Cite My Code
+version: 
+doi: 
+date-released: 
+
