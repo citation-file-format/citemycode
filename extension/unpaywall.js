@@ -753,8 +753,6 @@ function citationCFFExists(landingPageURL) {
  *
  ************************************************************************************/
 
-
-
 function run() {
     reportInstallation()
 
@@ -777,7 +775,8 @@ function run() {
         if (checkRepoLandingPageUrl(currUrl)) {
             // Check if a CITATION.cff file exits according to the URL
             if (citationCFFExists(currUrl) == true) {
-                // TODO implement 
+                // Switch on button
+                insertIframe("green", currUrl)
             }
         }
     }
