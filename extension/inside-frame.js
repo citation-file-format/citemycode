@@ -13,6 +13,7 @@ $(".button")
         // citemycode.js content script, which can then pop up
         // a prettier and mre useful dialog box.
         alert("CITATION " + url)
+
         if (color == "black") {
             alert("The citemycode extension " +
             "couldn't find any legal open-access version of this article.");
