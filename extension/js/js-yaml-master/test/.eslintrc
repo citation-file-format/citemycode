@@ -1,6 +1,0 @@
-env:
-  node:  true
-  mocha: true
-
-rules:
-  no-undefined: 0
