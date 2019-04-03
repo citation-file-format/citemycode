@@ -701,9 +701,47 @@ var getAbsoluteUrl = (function() {
 
 
 
+/***********************************************************************************
+ *
+ *  Sanity checks
+ *
+ ************************************************************************************/
+
+function checkRepoLandingPageUrl(gitHubURL) {
+    /* 
+        Check if the URL can possibly be on a repo landing page
+    */
+    var regex = /^https:\/\/github.com\/\w+\/\w+\/?$/;
+    if (regex.test(gitHubURL)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 
+function checkUrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
 
+
+function citationCFFExists(landingPageURL) {
+    // Check if URL ends with slash, if not, add it
+    if (landingPageURL.substr(-1) != '/') {
+        landingPageURL += '/';
+    }
+    // Append CITATION.cff to the URL
+    landingPageURL += "blob/master/CITATION.cff"
+    // Check if URL returns 404
+    if (checkUrlExists(landingPageURL)) {
+        return true;
+    }
+    return false;
+}
 
 
 
@@ -714,8 +752,6 @@ var getAbsoluteUrl = (function() {
  *  main method
  *
  ************************************************************************************/
-
-
 
 function run() {
     reportInstallation()
@@ -733,7 +769,16 @@ function run() {
     forwards to non-prefixed URL per default.
     */
     if (currUrl.substring(0, 18) == "https://github.com") {
-        alert("GitHub")
+        /* 
+        Check if we should show the button
+        */
+        if (checkRepoLandingPageUrl(currUrl)) {
+            // Check if a CITATION.cff file exits according to the URL
+            if (citationCFFExists(currUrl) == true) {
+                // Switch on button
+                insertIframe("green", currUrl)
+            }
+        }
     }
 
     /*doi = findDoi() // setting this globally.
