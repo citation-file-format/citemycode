@@ -2,27 +2,43 @@ if (typeof chrome !== "undefined"){
     browser = chrome
 }
 
-var parts = window.name.split("#")
-var color = parts[0]
+yaml = require('js-yaml')
+
+const rp = require('request-promise');
 var url = decodeURI(parts[1])
+var tmp_url = toString(url).replace("github", "raw.githubusercontent")
+var url = tmp_url.replace("blob/", "")
 
-$(".button")
-    .fadeIn()
-    .click(function(){
-        // todo: replace this scary alert with a message up to the
-        // citemycode.js content script, which can then pop up
-        // a prettier and mre useful dialog box.
-        alert("CITATION " + url)
 
-        if (color == "black") {
-            alert("The citemycode extension " +
-            "couldn't find any legal open-access version of this article.");
-        }
-        else {
-            // send a message to the extension, so it can open this url
-            // in a new tab
-            /*browser.runtime.sendMessage({"upUrl": url});*/
-        }
-    })
+rp(url)
+  .then(function(html) {
+    // console.log(html);
+    file = yaml.load(html)
+  })
+  .catch(function(err) {
+    //handle error
+  });
 
-$(".button").addClass(color)
+
+// var parts = window.name.split("#")
+// var color = parts[0]
+//
+// $(".button")
+//     .fadeIn()
+//     .click(function(){
+//         // todo: replace this scary alert with a message up to the
+//         // unpaywall.js content script, which can then pop up
+//         // a prettier and mre useful dialog box.
+//         alert("CITATION")
+//         if (color == "black") {
+//             alert("The Unpaywall extension " +
+//             "couldn't find any legal open-access version of this article.");
+//         }
+//         else {
+//             // send a message to the extension, so it can open this url
+//             // in a new tab
+//             /*browser.runtime.sendMessage({"upUrl": url});*/
+//         }
+//     })
+//
+// $(".button").addClass(color)
