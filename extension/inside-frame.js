@@ -10,11 +10,11 @@ $(".button")
     .fadeIn()
     .click(function(){
         // todo: replace this scary alert with a message up to the
-        // unpaywall.js content script, which can then pop up
+        // citemycode.js content script, which can then pop up
         // a prettier and mre useful dialog box.
         alert("CITATION " + url)
         if (color == "black") {
-            alert("The Unpaywall extension " +
+            alert("The citemycode extension " +
             "couldn't find any legal open-access version of this article.");
         }
         else {
