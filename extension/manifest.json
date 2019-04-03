@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "version_name":"Cite My Code 1.0.0",
   "manifest_version": 2,
-  "description": "Legally get full text of scholarly articles as you browse.",
+  "description": "Get BibText citation to a GitHub project while browsing.",
   "icons": {
     "16": "img/icon-16.png",
     "32": "img/icon-32.png",
@@ -18,7 +18,7 @@
   },
   "browser_action": {
     "default_icon": "img/icon.png",
-    "default_title": "Unpaywall",
+    "default_title": "Cite My Code",
     "default_popup": "popup.html"
   },
   "background": {
