@@ -1,3 +1,2 @@
-# unpaywall
-Repository for the Unpaywall browser extension for Chrome and Firefox. More documentation is available on the website
-at http://unpaywall.org/products/extension
+# City My Code
+Repository for the Cite My Code browser extension for Chrome and Firefox.
