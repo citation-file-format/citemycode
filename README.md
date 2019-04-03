@@ -17,6 +17,6 @@ Cite My Code works by pulling preferred citation information from [CITATION.cff]
 <img src="https://raw.githubusercontent.com/dbouquin/citemycode/master/images/loan_extensions.png" height="90">
 
 5. Navigate to your copy if the Cite My Code repository and click Select
-<img src="https://raw.githubusercontent.com/dbouquin/citemycode/master/images/select_local.png" height="200">
+<img src="https://raw.githubusercontent.com/dbouquin/citemycode/master/images/select_local1.png" height="200">
 
 You're done! Now when you navigate to a GitHub repo that contains a CITATION.cff, a green button will appear on the right side of your browser window. If you click that button, BibTeX will be generated that you can copy and paste into whatever tools you use to manage your bibliographies. 
