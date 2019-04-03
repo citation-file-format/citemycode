@@ -738,9 +738,9 @@ function citationCFFExists(landingPageURL) {
     landingPageURL += "blob/master/CITATION.cff"
     // Check if URL returns 404
     if (checkUrlExists(landingPageURL)) {
-        return true;
+        return landingPageURL;
     }
-    return false;
+    return undefined;
 }
 
 
@@ -774,9 +774,10 @@ function run() {
         */
         if (checkRepoLandingPageUrl(currUrl)) {
             // Check if a CITATION.cff file exits according to the URL
-            if (citationCFFExists(currUrl) == true) {
+            var cffURL = citationCFFExists(currUrl);
+            if (cffURL != undefined) {
                 // Switch on button
-                insertIframe("green", currUrl)
+                insertIframe("green", cffURL)
             }
         }
     }
