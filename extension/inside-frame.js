@@ -12,7 +12,7 @@ $(".button")
         // todo: replace this scary alert with a message up to the
         // unpaywall.js content script, which can then pop up
         // a prettier and mre useful dialog box.
-        alert("CITATION")
+        alert("CITATION " + url)
         if (color == "black") {
             alert("The Unpaywall extension " +
             "couldn't find any legal open-access version of this article.");
