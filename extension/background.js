@@ -2,15 +2,16 @@ if (typeof chrome !== "undefined" && chrome){
     browser = chrome
 }
 
-var logUrl = "http://unpaywall.org/log/install";
+var logUrl = "https://github.com/citation-file-format/citemycode/log/";
 
 
 function showWelcomePage(){
-    browser.tabs.create({url: "http://citation-file-format.github.io/citemycode"}, function (tab) {});
+    browser.tabs.create({url: "https://github.com/citation-file-format/citemycode/"}, function (tab) {});
 }
 
 function checkToShowWelcomePage(){
-    // check the server to make sure we are good to show the welcome screen
+    /*
+	// check the server to make sure we are good to show the welcome screen
     fetch(logUrl, {method:"POST", body:{}}).then(function(resp){
         if (resp.ok){
             resp.json().then(function(json){
@@ -30,6 +31,7 @@ function checkToShowWelcomePage(){
         .catch(function(){
             showWelcomePage()
         })
+		*/
 }
 
 
