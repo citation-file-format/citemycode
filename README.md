@@ -13,7 +13,7 @@ Cite My Code works by pulling preferred citation information from [CITATION.cff]
 3. Once you are on the Extensions page, turn on Developer mode
 <img src="https://raw.githubusercontent.com/citation-file-format/citemycode/master/images/developer_mode_on.png" height="60">
 
-4. Turning on Developer mode will show you new buttons - click on the buttone labeled "Load unpacked"
+4. Turning on Developer mode will show you new buttons - click on the button labeled "Load unpacked"
 <img src="https://raw.githubusercontent.com/citation-file-format/citemycode/master/images/load_extensions.png" height="90">
 
 5. Navigate to your copy if the Cite My Code repository and click Select
