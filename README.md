@@ -1,4 +1,4 @@
-https://img.shields.io/badge/developed%20at-CollabW19-red.svg
+![](https://img.shields.io/badge/developed%20at-CollabW19-red.svg)
 
 ## Get Started
 Cite My Code works by pulling preferred citation information from [CITATION.cff](https://citation-file-format.github.io/) files. The CITATION.cff file needs to be located in root of the repository you would like to cite. If you want to make sure Cite My Code can be used to cite your software, you will need to create a CITATION.cff for your repo.
