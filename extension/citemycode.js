@@ -94,7 +94,7 @@ function checkRepoLandingPageUrl(gitHubURL) {
     /* 
         Check if the URL can possibly be on a repo landing page
     */
-    var regex = /^https:\/\/github.com\/\w+\/\w+\/?$/;
+    var regex = /^https:\/\/github.com\/[\w-]+\/[\w-]+\/?$/;
     if (regex.test(gitHubURL)) {
         return true;
     }
